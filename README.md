@@ -48,10 +48,10 @@ div for new acquisitions in `OpacMainUserBlock` system preference:
 ```
 
 Add some code in `OPACUserJS` system preference in order to populate flipsters
-with JSON data. For example:
+with JSON data. For example, to add a flipster on Koha OPAC home page:
 
 ```javascript
-$(document).ready(function() {
+if ( $('body').attr('id') == 'opac-main' ) {
   $.getScript("/jquery.koha.flipster.js")
     .done(function(){
       $.kohaFlipster({
@@ -71,7 +71,7 @@ $(document).ready(function() {
         ]
       });
     });
-});
+}
 ```
 
 License
