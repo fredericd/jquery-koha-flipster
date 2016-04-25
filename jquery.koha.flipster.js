@@ -1,5 +1,5 @@
 $.extend({
-  kohaCoceFlipster: function(param) {
+  kohaFlipster: function(param) {
     $.getScript(param.js)
       .done(function() {
         $('<link>', {
