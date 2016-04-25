@@ -40,7 +40,7 @@ title, and cover URL, as JSON file. This looks like this:
 This list could be generated automatically using `koha-coce-url`, a Perl
 script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-Contrib-Tamil).
 
-Put one or several <div> on your OPAC identified by unique IDs. For example a
+Put one or several div on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
 
 ```html
