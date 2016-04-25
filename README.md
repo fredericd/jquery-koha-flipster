@@ -2,7 +2,7 @@ jQuery.koha.flipster
 ========================
 
 Koha Flipster is a jQuery plugin build upon
-[jQuery.Flipster](http://https://github.com/drien/jquery-flipster). It
+[jQuery.Flipster](https://github.com/drien/jquery-flipster). It
 animates one or several __flipsters__ of books's cover.
 
 How to?
@@ -38,7 +38,7 @@ title, and cover URL, as JSON file. This looks like this:
 ```
 
 This list could be generated automatically using `koha-coce-url`, a Perl
-script available in Koha::Contrib::Tamil.
+script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-Contrib-Tamil).
 
 Put one or several <div> on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
@@ -52,19 +52,19 @@ with JSON data. For example:
 
 ```javascript
 $(document).ready(function() {
-  $.getScript("/demo/jquery.koha.flipster.js")
+  $.getScript("/jquery.koha.flipster.js")
     .done(function(){
-      $.kohaCoceFlipster({
-        js: '/demo/jquery.flipster.min.js',
-        css: '/demo/jquery.flipster.min.css',
+      $.kohaFlipster({
+        js: '/jquery.flipster.min.js',
+        css: '/jquery.flipster.min.css',
         flipsters: [
           {
-            bibs: '/demo/newacqs.json',
+            bibs: '/newacqs.json',
             selector: '#newacqs',
             flipster: { style:'wheel' }
           },
           {
-            bibs: '/demo/expobibs.json',
+            bibs: '/expobibs.json',
             selector: '#expobibs',
             flipster: { style:'carousel', spacing:-.3 }
           }
