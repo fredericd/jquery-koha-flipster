@@ -1,0 +1,33 @@
+{
+  "name": "jquery.koha.flipster",
+  "version": "0.0.1",
+  "homepage": "https://github.com/fredericd/jquery.koha.flipster",
+  "description": "Responsive Koha catalog books flipster",
+  "main": [
+    "dist/jquery.koha.flipster.min.js"
+  ],
+  "authors": [
+    "Frédéric Demians <f.demians@tamil.fr>"
+  ],
+  "keywords": [
+    "koha",
+    "coverflow",
+    "jquery",
+    "carousel",
+    "flipster",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery-flipster": "latest"
+  }
+}

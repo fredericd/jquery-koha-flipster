@@ -11,8 +11,9 @@ How to?
 Install jQuery.Flipster js/css files on your Koha server. Required files are
 `jquery.flipster.min.js` and `jquery.flipster.min.css`.
 
-Install jQuery.koha.flipster on your Koha server. Just copy the file
-`jquery.koha.flipster.js`.
+Install jQuery.koha.flipster on your Koha server. Just copy file
+`jquery.koha.flipster.js` and `jquery.koha.flipster.css`, or the minified
+equivalents (-min files).
 
 Create at least one list of Koha biblio records with their biblionumber,
 title, and cover URL, as JSON file. This looks like this:
@@ -38,7 +39,8 @@ title, and cover URL, as JSON file. This looks like this:
 ```
 
 This list could be generated automatically using `koha-coce-url`, a Perl
-script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-Contrib-Tamil).
+script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-
+Contrib-Tamil).
 
 Put one or several div on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
@@ -55,8 +57,7 @@ if ( $('body').attr('id') == 'opac-main' ) {
   $.getScript("/jquery.koha.flipster.js")
     .done(function(){
       $.kohaFlipster({
-        js: '/jquery.flipster.min.js',
-        css: '/jquery.flipster.min.css',
+        css: '/jquery.koha.flipster-min.css',
         flipsters: [
           {
             bibs: '/newacqs.json',
