@@ -8,11 +8,8 @@ animates one or several __flipsters__ of books's cover.
 How to?
 -------
 
-Install jQuery.Flipster js/css files on your Koha server. Required files are
-`jquery.flipster.min.js` and `jquery.flipster.min.css`.
-
-Install jQuery.koha.flipster on your Koha server. Just copy file
-`jquery.koha.flipster.js` and `jquery.koha.flipster.css`, or the minified
+Install jQuery.koha.flipster on your Koha server. Just copy files
+`jquery.koha.flipster.js` and `jquery.koha.flipster.css`, or their minified
 equivalents (-min files).
 
 Create at least one list of Koha biblio records with their biblionumber,
@@ -46,11 +43,11 @@ Put one or several div on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
 
 ```html
-<div id="#newacquisitions"></div>
+<div id="#newacqs"></div>
 ```
 
 Add some code in `OPACUserJS` system preference in order to populate flipsters
-with JSON data. For example, to add a flipster on Koha OPAC home page:
+with JSON data. For example, to add two flipsters on Koha OPAC home page:
 
 ```javascript
 if ( $('body').attr('id') == 'opac-main' ) {

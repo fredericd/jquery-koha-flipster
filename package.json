@@ -24,10 +24,10 @@
   "homepage": "https://github.com/fredericd/jquery-koha-flipster",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.6",
     "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-sass": "^2.3.1",
     "gulp-jshint": "latest",
+    "gulp-sass": "^2.3.1",
     "gulp-uglify": "latest",
     "jshint-stylish": "latest"
   }
