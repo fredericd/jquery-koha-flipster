@@ -17,10 +17,10 @@ $.extend({
             "<div>\n<ul>\n",
             acqs.map(function(acq){
               return "<li>\n" +
-                  "<a href=\"/cgi-bin/koha/opac-detail.pl?biblionumber=" + acq[0] + "\">" +
+                  "<a href=\"/cgi-bin/koha/opac-detail.pl?biblionumber=" + acq[0] + "\">\n" +
                   "<img src=\"" + acq[2] + "\" title=\"" + acq[1] +  "\"/>\n" +
-                  "</a>\n</li>\n";
-            }),
+                  "</a>\n</li>";
+            }).join("\n"),
             "</ul>\n</div>" ].join("\n");
           flipster.flipster.fadeIn = 0;
           $(flipster.selector).html(html).flipster(flipster.flipster);

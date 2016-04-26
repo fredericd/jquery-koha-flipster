@@ -1,5 +1,6 @@
 var gulp     = require('gulp'),
 	concat   = require('gulp-concat'),
+	rename   = require('gulp-rename'),
 	uglify   = require("gulp-uglify"),
 	cleancss = require('gulp-clean-css'),
 	jshint   = require('gulp-jshint');
@@ -11,7 +12,7 @@ gulp.task('javascript', function() {
 		.pipe(concat('jquery.koha.flipster.js'))
 		.pipe(gulp.dest('dist/'))
 		.pipe(uglify())
-		.pipe(concat('jquery.koha.flipster-min.js'))
+		.pipe(rename({ extname: '-min.js' }))
 		.pipe(gulp.dest('dist/'));
 });
 
@@ -19,8 +20,8 @@ gulp.task('css', function() {
 	return gulp.src('src/*.css')
 		.pipe(concat('jquery.koha.flipster.css'))
 		.pipe(gulp.dest('dist/'))
-		.pipe(concat('jquery.koha.flipster-min.css'))
 		.pipe(cleancss())
+		.pipe(rename({ extname: '-min.css' }))
 		.pipe(gulp.dest('dist/'));
 });
 
