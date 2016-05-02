@@ -35,9 +35,9 @@ title, and cover URL, as JSON file. This looks like this:
 ]
 ```
 
-This list could be generated automatically using `koha-coce-url`, a Perl
-script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-
-Contrib-Tamil).
+This list could be generated automatically using [koha-coce-
+url](https://metacpan.org/pod/koha-coce-url), a Perl script available in
+[Koha::Contrib::Tamil](https://github.com/fredericd/Koha- Contrib-Tamil).
 
 Put one or several div on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
@@ -73,6 +73,15 @@ if ( $('body').attr('id') == 'opac-main' ) {
 ```
 
 As you can see on the above example, `kohaFlipster` function accepts two parameters.
+An optional third parameter is also available.
+
+- `css`: The URL to the Koha flipster CSS file.
+- `flipster`: An array of flipster to display. Each entry in this array has three parameters:
+  - `bibs`: URL of the JSON file containing biblio records, described above.
+  - `selector`: A jQuery selector to the div to be replaced by the flipster.
+  - `flipster`: The jQuery Flipster parameters.
+- `host`: The Koha OPAC Server host name. Optional. It may be necessary when the flipster
+is integrated outside the Koha OPAC, for example in a CMS page.
 
 License
 -------
