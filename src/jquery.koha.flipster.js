@@ -10,6 +10,7 @@ $.extend({
       type: 'text/css',
       href: param.css
     }).appendTo('head');
+    var host = param.host || '';
     param.flipsters.forEach(function(flipster) {
       $.getJSON(flipster.bibs)
         .done(function(acqs) {
@@ -17,7 +18,8 @@ $.extend({
             "<div>\n<ul>\n",
             acqs.map(function(acq){
               return "<li>\n" +
-                  "<a href=\"/cgi-bin/koha/opac-detail.pl?biblionumber=" + acq[0] + "\">\n" +
+                  "<a href=\"" + host +
+                  "/cgi-bin/koha/opac-detail.pl?biblionumber=" + acq[0] + "\">\n" +
                   "<img src=\"" + acq[2] + "\" title=\"" + acq[1] +  "\"/>\n" +
                   "</a>\n</li>";
             }).join("\n"),

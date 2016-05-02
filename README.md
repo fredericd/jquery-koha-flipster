@@ -72,6 +72,8 @@ if ( $('body').attr('id') == 'opac-main' ) {
 }
 ```
 
+As you can see on the above example, `kohaFlipster` function accepts two parameters.
+
 License
 -------
 
