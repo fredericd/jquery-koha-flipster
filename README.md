@@ -10,7 +10,8 @@ How to?
 
 Install jQuery.koha.flipster on your Koha server. Just copy files
 `jquery.koha.flipster.js` and `jquery.koha.flipster.css`, or their minified
-equivalents (-min files).
+equivalents (-min files). You may choose to integrate the css file directly
+into yours.
 
 Create at least one list of Koha biblio records with their biblionumber,
 title, and cover URL, as JSON file. This looks like this:
@@ -75,7 +76,9 @@ if ( $('body').attr('id') == 'opac-main' ) {
 As you can see on the above example, `kohaFlipster` function accepts two parameters.
 An optional third parameter is also available.
 
-- `css`: The URL to the Koha flipster CSS file.
+- `css`: The URL to the Koha flipster CSS file. Alternatively, you can omit
+  this parameter. In this case, you have to cut-and-paste the provied CSS file
+  into yours.
 - `flipster`: An array of flipster to display. Each entry in this array has three parameters:
   - `bibs`: URL of the JSON file containing biblio records, described above.
   - `selector`: A jQuery selector to the div to be replaced by the flipster.

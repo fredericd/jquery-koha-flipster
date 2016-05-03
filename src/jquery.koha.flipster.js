@@ -5,11 +5,13 @@
 
 $.extend({
   kohaFlipster: function(param) {
-    $('<link>', {
-      rel: 'stylesheet',
-      type: 'text/css',
-      href: param.css
-    }).appendTo('head');
+    if (param.css) {
+        $('<link>', {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: param.css
+        }).appendTo('head');
+    }
     var host = param.host || '';
     param.flipsters.forEach(function(flipster) {
       $.getJSON(flipster.bibs)
