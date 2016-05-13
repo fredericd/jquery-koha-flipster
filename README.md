@@ -56,6 +56,7 @@ if ( $('body').attr('id') == 'opac-main' ) {
     .done(function(){
       $.kohaFlipster({
         css: '/jquery.koha.flipster-min.css',
+        shuffle: true,
         flipsters: [
           {
             bibs: '/newacqs.json',
@@ -73,18 +74,20 @@ if ( $('body').attr('id') == 'opac-main' ) {
 }
 ```
 
-As you can see on the above example, `kohaFlipster` function accepts two parameters.
-An optional third parameter is also available.
+As you can see on the above example, `kohaFlipster` function accepts several
+parameters.
 
 - `css`: The URL to the Koha flipster CSS file. Alternatively, you can omit
   this parameter. In this case, you have to cut-and-paste the provied CSS file
   into yours.
-- `flipster`: An array of flipster to display. Each entry in this array has three parameters:
+- `flipster`: An array of flipster to display. Each entry in this array has
+  three parameters:
   - `bibs`: URL of the JSON file containing biblio records, described above.
   - `selector`: A jQuery selector to the div to be replaced by the flipster.
   - `flipster`: The jQuery Flipster parameters.
-- `host`: The Koha OPAC Server host name. Optional. It may be necessary when the flipster
-is integrated outside the Koha OPAC, for example in a CMS page.
+- `suffle`: Covers have to be suffled?
+- `host`: The Koha OPAC Server host name. Optional. It may be necessary when
+  the flipster is integrated outside the Koha OPAC, for example in a CMS page.
 
 License
 -------

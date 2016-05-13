@@ -698,6 +698,20 @@
 
 'use strict';
 
+/**
+ * Randomize array element order in-place.
+ * Using Durstenfeld shuffle algorithm.
+ */
+function durstenfeldShuffle(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
 $.extend({
   kohaFlipster: function(param) {
     if (param.css) {
@@ -711,6 +725,7 @@ $.extend({
     param.flipsters.forEach(function(flipster) {
       $.getJSON(flipster.bibs)
         .done(function(acqs) {
+          if (param.shuffle) { durstenfeldShuffle(acqs); }
           var html = [
             "<div>\n<ul>\n",
             acqs.map(function(acq){
