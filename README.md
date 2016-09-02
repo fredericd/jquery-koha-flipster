@@ -85,7 +85,7 @@ parameters.
   - `bibs`: URL of the JSON file containing biblio records, described above.
   - `selector`: A jQuery selector to the div to be replaced by the flipster.
   - `flipster`: The jQuery Flipster parameters.
-- `suffle`: Covers have to be suffled?
+- `shuffle`: Covers have to be shuffled?
 - `host`: The Koha OPAC Server host name. Optional. It may be necessary when
   the flipster is integrated outside the Koha OPAC, for example in a CMS page.
 
