@@ -36,9 +36,7 @@ title, and cover URL, as JSON file. This looks like this:
 ]
 ```
 
-This list could be generated automatically using [koha-coce-
-url](https://metacpan.org/pod/koha-coce-url), a Perl script available in
-[Koha::Contrib::Tamil](https://github.com/fredericd/Koha- Contrib-Tamil).
+This list could be generated automatically using [koha-coce-url](https://metacpan.org/pod/koha-coce-url), a Perl script available in [Koha::Contrib::Tamil](https://github.com/fredericd/Koha-Contrib-Tamil).
 
 Put one or several div on your OPAC identified by unique IDs. For example a
 div for new acquisitions in `OpacMainUserBlock` system preference:
@@ -52,7 +50,7 @@ with JSON data. For example, to add two flipsters on Koha OPAC home page:
 
 ```javascript
 if ( $('body').attr('id') == 'opac-main' ) {
-  $.getScript("/jquery.koha.flipster.js")
+  $.getScript("/jquery.koha.flipster-min.js")
     .done(function(){
       $.kohaFlipster({
         css: '/jquery.koha.flipster-min.css',
@@ -94,7 +92,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Frédéric Demians
+Copyright (c) 2018 Frédéric Demians
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
